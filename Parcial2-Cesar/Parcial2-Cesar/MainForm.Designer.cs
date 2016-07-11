@@ -46,19 +46,21 @@
             this.CelularTextBox = new System.Windows.Forms.TextBox();
             this.CedulaTextBox = new System.Windows.Forms.TextBox();
             this.SueldoTextBox = new System.Windows.Forms.TextBox();
-            this.InsentivoTextBox = new System.Windows.Forms.TextBox();
+            this.IncentivoTextBox = new System.Windows.Forms.TextBox();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.ActivoTextBox = new System.Windows.Forms.TextBox();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.ModificarButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.EmpleadoDataGridView = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Cargo = new System.Windows.Forms.Label();
+            this.CargoTextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,7 +138,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(234, 130);
+            this.label9.Location = new System.Drawing.Point(234, 157);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 8;
@@ -145,11 +147,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(234, 162);
+            this.label10.Location = new System.Drawing.Point(234, 190);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Insentivo";
+            this.label10.Text = "Incentivo";
             // 
             // IdTextBox
             // 
@@ -204,21 +206,21 @@
             // 
             // SueldoTextBox
             // 
-            this.SueldoTextBox.Location = new System.Drawing.Point(300, 121);
+            this.SueldoTextBox.Location = new System.Drawing.Point(300, 150);
             this.SueldoTextBox.Name = "SueldoTextBox";
             this.SueldoTextBox.Size = new System.Drawing.Size(100, 20);
             this.SueldoTextBox.TabIndex = 19;
             // 
-            // InsentivoTextBox
+            // IncentivoTextBox
             // 
-            this.InsentivoTextBox.Location = new System.Drawing.Point(300, 154);
-            this.InsentivoTextBox.Name = "InsentivoTextBox";
-            this.InsentivoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.InsentivoTextBox.TabIndex = 20;
+            this.IncentivoTextBox.Location = new System.Drawing.Point(300, 183);
+            this.IncentivoTextBox.Name = "IncentivoTextBox";
+            this.IncentivoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.IncentivoTextBox.TabIndex = 20;
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(19, 239);
+            this.NuevoButton.Location = new System.Drawing.Point(19, 255);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 23);
             this.NuevoButton.TabIndex = 22;
@@ -228,7 +230,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(234, 196);
+            this.label11.Location = new System.Drawing.Point(234, 220);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 10;
@@ -236,14 +238,14 @@
             // 
             // ActivoTextBox
             // 
-            this.ActivoTextBox.Location = new System.Drawing.Point(300, 188);
+            this.ActivoTextBox.Location = new System.Drawing.Point(300, 213);
             this.ActivoTextBox.Name = "ActivoTextBox";
             this.ActivoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ActivoTextBox.TabIndex = 21;
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(141, 239);
+            this.GuardarButton.Location = new System.Drawing.Point(138, 255);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 23);
             this.GuardarButton.TabIndex = 23;
@@ -253,7 +255,7 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(262, 239);
+            this.EliminarButton.Location = new System.Drawing.Point(258, 255);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 23);
             this.EliminarButton.TabIndex = 24;
@@ -262,25 +264,25 @@
             // 
             // ModificarButton
             // 
-            this.ModificarButton.Location = new System.Drawing.Point(385, 239);
+            this.ModificarButton.Location = new System.Drawing.Point(380, 255);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(75, 23);
             this.ModificarButton.TabIndex = 25;
             this.ModificarButton.Text = "Modificar";
             this.ModificarButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // EmpleadoDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmpleadoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmpleadoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Fecha,
             this.Nombre,
             this.Direccion});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 296);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(462, 168);
-            this.dataGridView1.TabIndex = 26;
+            this.EmpleadoDataGridView.Location = new System.Drawing.Point(19, 296);
+            this.EmpleadoDataGridView.Name = "EmpleadoDataGridView";
+            this.EmpleadoDataGridView.Size = new System.Drawing.Size(462, 168);
+            this.EmpleadoDataGridView.TabIndex = 26;
             // 
             // Id
             // 
@@ -302,18 +304,36 @@
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
             // 
+            // Cargo
+            // 
+            this.Cargo.AutoSize = true;
+            this.Cargo.Location = new System.Drawing.Point(234, 130);
+            this.Cargo.Name = "Cargo";
+            this.Cargo.Size = new System.Drawing.Size(35, 13);
+            this.Cargo.TabIndex = 27;
+            this.Cargo.Text = "Cargo";
+            // 
+            // CargoTextBox
+            // 
+            this.CargoTextBox.Location = new System.Drawing.Point(300, 121);
+            this.CargoTextBox.Name = "CargoTextBox";
+            this.CargoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CargoTextBox.TabIndex = 28;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 509);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CargoTextBox);
+            this.Controls.Add(this.Cargo);
+            this.Controls.Add(this.EmpleadoDataGridView);
             this.Controls.Add(this.ModificarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.ActivoTextBox);
-            this.Controls.Add(this.InsentivoTextBox);
+            this.Controls.Add(this.IncentivoTextBox);
             this.Controls.Add(this.SueldoTextBox);
             this.Controls.Add(this.CedulaTextBox);
             this.Controls.Add(this.CelularTextBox);
@@ -335,7 +355,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "Empleado";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,18 +381,20 @@
         private System.Windows.Forms.TextBox CelularTextBox;
         private System.Windows.Forms.TextBox CedulaTextBox;
         private System.Windows.Forms.TextBox SueldoTextBox;
-        private System.Windows.Forms.TextBox InsentivoTextBox;
+        private System.Windows.Forms.TextBox IncentivoTextBox;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox ActivoTextBox;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button ModificarButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView EmpleadoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.Label Cargo;
+        private System.Windows.Forms.TextBox CargoTextBox;
     }
 }
 

@@ -90,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1b612040-20f8-4947-8f05-d76f6de58c90}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DALL\DALL.csproj">
       <Project>{b1fcce3d-f682-4334-93fd-a14508303266}</Project>
       <Name>DALL</Name>

@@ -47,12 +47,18 @@
             this.CedulaTextBox = new System.Windows.Forms.TextBox();
             this.SueldoTextBox = new System.Windows.Forms.TextBox();
             this.InsentivoTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.ActivoTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.ModificarButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -210,14 +216,14 @@
             this.InsentivoTextBox.Size = new System.Drawing.Size(100, 20);
             this.InsentivoTextBox.TabIndex = 20;
             // 
-            // button1
+            // NuevoButton
             // 
-            this.button1.Location = new System.Drawing.Point(19, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.NuevoButton.Location = new System.Drawing.Point(19, 239);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(75, 23);
+            this.NuevoButton.TabIndex = 22;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -235,42 +241,77 @@
             this.ActivoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ActivoTextBox.TabIndex = 21;
             // 
-            // button2
+            // GuardarButton
             // 
-            this.button2.Location = new System.Drawing.Point(141, 239);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.GuardarButton.Location = new System.Drawing.Point(141, 239);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(75, 23);
+            this.GuardarButton.TabIndex = 23;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // EliminarButton
             // 
-            this.button3.Location = new System.Drawing.Point(262, 239);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EliminarButton.Location = new System.Drawing.Point(262, 239);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(75, 23);
+            this.EliminarButton.TabIndex = 24;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // ModificarButton
             // 
-            this.button4.Location = new System.Drawing.Point(385, 239);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ModificarButton.Location = new System.Drawing.Point(385, 239);
+            this.ModificarButton.Name = "ModificarButton";
+            this.ModificarButton.Size = new System.Drawing.Size(75, 23);
+            this.ModificarButton.TabIndex = 25;
+            this.ModificarButton.Text = "Modificar";
+            this.ModificarButton.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Fecha,
+            this.Nombre,
+            this.Direccion});
+            this.dataGridView1.Location = new System.Drawing.Point(19, 296);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(462, 168);
+            this.dataGridView1.TabIndex = 26;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 302);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(508, 509);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ModificarButton);
+            this.Controls.Add(this.EliminarButton);
+            this.Controls.Add(this.GuardarButton);
+            this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.ActivoTextBox);
             this.Controls.Add(this.InsentivoTextBox);
             this.Controls.Add(this.SueldoTextBox);
@@ -294,6 +335,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "Empleado";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,12 +362,17 @@
         private System.Windows.Forms.TextBox CedulaTextBox;
         private System.Windows.Forms.TextBox SueldoTextBox;
         private System.Windows.Forms.TextBox InsentivoTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox ActivoTextBox;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button GuardarButton;
+        private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.Button ModificarButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
     }
 }
 

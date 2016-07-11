@@ -39,6 +39,20 @@ namespace BLL
 
         }
 
+        public static Empleados Eliminar(int IdEmpleado)
+        {
+            var database = new EmpleadosDb();
+
+            return database.Empleados.Find(IdEmpleado);
+        }
+
+        public static Empleados Modificar(int IdEmpleado)
+        {
+            var database = new EmpleadosDb();
+
+            return database.Empleados.Find(IdEmpleado);
+        }
+
         public static List<Empleados> GetLista()
         {
             List<Empleados> lista = new List<Empleados>();
@@ -51,3 +65,4 @@ namespace BLL
 
         }
     }
+}

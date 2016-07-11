@@ -8,8 +8,13 @@ using System.Threading.Tasks;
 
 namespace DALL
 {
-    public static class EmpleadosDb : DbContext
+    public class EmpleadosDb : DbContext
     {
+        public EmpleadosDb() : base("name = Persona")
+        {
+
+        }
         
+        public DbSet<Empleado>
     }
 }
